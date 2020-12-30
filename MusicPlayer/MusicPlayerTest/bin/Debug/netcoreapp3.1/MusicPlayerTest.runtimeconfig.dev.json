@@ -1,0 +1,8 @@
+{
+  "runtimeOptions": {
+    "additionalProbingPaths": [
+      "C:\\Users\\delia\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\delia\\.nuget\\packages"
+    ]
+  }
+}

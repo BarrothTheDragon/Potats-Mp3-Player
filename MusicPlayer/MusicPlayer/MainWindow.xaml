@@ -1,0 +1,24 @@
+﻿<Window x:Class="MusicPlayer.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        MinHeight="600"
+        MinWidth="700"
+        Title="Potat's Music Player" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Frame Grid.Column="0" 
+               Grid.Row="0" 
+               Name="mainFrame"
+               HorizontalAlignment="Stretch"
+               VerticalAlignment="Stretch"
+               NavigationUIVisibility="Hidden"/>
+    </Grid>
+</Window>

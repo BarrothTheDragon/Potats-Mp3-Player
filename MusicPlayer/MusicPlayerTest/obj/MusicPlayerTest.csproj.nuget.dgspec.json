@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\MyCode\\Potat's MP3 Player\\MusicPlayer\\MusicPlayerTest\\MusicPlayerTest.csproj": {}
+    "E:\\MyCode\\Potats-Mp3-Player\\MusicPlayer\\MusicPlayerTest\\MusicPlayerTest.csproj": {}
   },
   "projects": {
-    "E:\\MyCode\\Potat's MP3 Player\\MusicPlayer\\MusicPlayerTest\\MusicPlayerTest.csproj": {
+    "E:\\MyCode\\Potats-Mp3-Player\\MusicPlayer\\MusicPlayerTest\\MusicPlayerTest.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\MyCode\\Potat's MP3 Player\\MusicPlayer\\MusicPlayerTest\\MusicPlayerTest.csproj",
+        "projectUniqueName": "E:\\MyCode\\Potats-Mp3-Player\\MusicPlayer\\MusicPlayerTest\\MusicPlayerTest.csproj",
         "projectName": "MusicPlayerTest",
-        "projectPath": "E:\\MyCode\\Potat's MP3 Player\\MusicPlayer\\MusicPlayerTest\\MusicPlayerTest.csproj",
+        "projectPath": "E:\\MyCode\\Potats-Mp3-Player\\MusicPlayer\\MusicPlayerTest\\MusicPlayerTest.csproj",
         "packagesPath": "C:\\Users\\delia\\.nuget\\packages\\",
-        "outputPath": "E:\\MyCode\\Potat's MP3 Player\\MusicPlayer\\MusicPlayerTest\\obj\\",
+        "outputPath": "E:\\MyCode\\Potats-Mp3-Player\\MusicPlayer\\MusicPlayerTest\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\delia\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -28,8 +28,8 @@
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "E:\\MyCode\\Potat's MP3 Player\\MusicPlayer\\MusicPlayer\\MusicPlayer.csproj": {
-                "projectPath": "E:\\MyCode\\Potat's MP3 Player\\MusicPlayer\\MusicPlayer\\MusicPlayer.csproj"
+              "E:\\MyCode\\Potats-Mp3-Player\\MusicPlayer\\MusicPlayer\\MusicPlayer.csproj": {
+                "projectPath": "E:\\MyCode\\Potats-Mp3-Player\\MusicPlayer\\MusicPlayer\\MusicPlayer.csproj"
               }
             }
           }
@@ -84,15 +84,15 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.103\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "E:\\MyCode\\Potat's MP3 Player\\MusicPlayer\\MusicPlayer\\MusicPlayer.csproj": {
+    "E:\\MyCode\\Potats-Mp3-Player\\MusicPlayer\\MusicPlayer\\MusicPlayer.csproj": {
       "restore": {
-        "projectUniqueName": "E:\\MyCode\\Potat's MP3 Player\\MusicPlayer\\MusicPlayer\\MusicPlayer.csproj",
+        "projectUniqueName": "E:\\MyCode\\Potats-Mp3-Player\\MusicPlayer\\MusicPlayer\\MusicPlayer.csproj",
         "projectName": "MusicPlayer",
-        "projectPath": "E:\\MyCode\\Potat's MP3 Player\\MusicPlayer\\MusicPlayer\\MusicPlayer.csproj"
+        "projectPath": "E:\\MyCode\\Potats-Mp3-Player\\MusicPlayer\\MusicPlayer\\MusicPlayer.csproj"
       },
       "frameworks": {
         "net461": {}

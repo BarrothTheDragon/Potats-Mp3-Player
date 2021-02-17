@@ -11,10 +11,7 @@ namespace MusicPlayer
         public LoadingPage()
         {
             InitializeComponent();
-            (new MusicFileExtractor()).GetAllMusicFiles();
-            //get all songs
-            //build albums
-            //MusicFileExtractor.GetAllMusicFiles();
+            RepositoryController.GetMusicCollectionRepository.BuildMusicCollection();
         }
     }
 }

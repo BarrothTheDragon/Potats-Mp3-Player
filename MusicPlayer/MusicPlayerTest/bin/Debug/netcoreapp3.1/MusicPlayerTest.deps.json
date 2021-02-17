@@ -1158,6 +1158,14 @@
         "runtime": {
           "MusicPlayer.exe": {}
         }
+      },
+      "TagLibSharp/2.2.0.0": {
+        "runtime": {
+          "TagLibSharp.dll": {
+            "assemblyVersion": "2.2.0.0",
+            "fileVersion": "2.2.0.0"
+          }
+        }
       }
     }
   },
@@ -1827,6 +1835,11 @@
     },
     "MusicPlayer/1.0.0": {
       "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "TagLibSharp/2.2.0.0": {
+      "type": "reference",
       "serviceable": false,
       "sha512": ""
     }

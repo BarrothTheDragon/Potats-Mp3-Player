@@ -1,31 +1,59 @@
-﻿using System;
+﻿using MusicPlayer.MusicPlayerElements;
+using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using MusicPlayer.MusicPlayerElements;
 
 namespace MusicPlayer.RepositoryControl
 {
-    public static class MusicCollectionRepository
+    public class MusicCollectionRepository
     {
-        public static HashSet<Album> AlbumCollection { get; set; }
+        public static HashSet<Album> AlbumCollection { get; private set; }
 
-        /*private string ExtractSongMetadata(string songDirectory)
+        public MusicCollectionRepository()
         {
-            return string.Empty;
+            AlbumCollection = new HashSet<Album>();
+        }
 
-            var a = new FileInfo("C:\\Users\\Pegasus\\Desktop\\Test Music\\Disc 1\\1.01 Phoenix Wright- Ace Attorney - Prologue.mp3");
-            var file1 = TagLib.File.Create("C:\\Users\\Pegasus\\Desktop\\Test Music\\Disc 1\\1.01 Phoenix Wright- Ace Attorney - Prologue.mp3");
-            var t1 = file1.Tag.Copyright;
-            var t2 = file1.Tag.Album;
-            var t3 = file1.Tag.AlbumArtists;
-            var t4 = file1.Tag.Title;
-            var t5 = file1.Tag.Comment;
-            var t6 = file1.Tag.Composers;
-            var t7 = file1.Tag.Conductor;
-            var t8 = file1.Tag.Grouping;
-            //var t9 = file.Tag.Artists;
-        }*/
+        public void DeleteAlbumCollection()
+            => AlbumCollection = new HashSet<Album>();
+
+        public Album GetAlbumByTitle(string title)
+            => AlbumCollection.Where(albumEntry => albumEntry.Title == title).FirstOrDefault();
+
+        public void BuildMusicCollection()
+        {
+            var musicPaths = new MusicFileExtractor().GetAllMusicFiles();
+            var musicFiles = ConvertToMusicFileList(musicPaths);
+            CreateAlbumCollection(musicFiles);
+        }
+
+        private void CreateAlbumCollection(List<MusicFile> musicFiles)
+        {
+            foreach (MusicFile musicFile in musicFiles)
+            {
+                var album = GetAlbumByTitle(musicFile.AlbumTitle) ?? InitializeNewAlbum(musicFile);
+                album.SongList.Add(musicFile);
+            }
+        }
+
+        private Album InitializeNewAlbum(MusicFile file)
+        {
+            var album = new Album(file);
+            AlbumCollection.Add(album);
+            return album;
+        }
+
+        private List<MusicFile> ConvertToMusicFileList(List<string> musicPaths)
+        {
+            var musicFiles = new List<MusicFile>();
+            musicPaths.ForEach(entry => musicFiles.Add(ConvertToMusicFile(entry)));
+            return musicFiles;
+        }
+
+        private MusicFile ConvertToMusicFile(string musicPath)
+        {
+            var musicTag = TagLib.File.Create(musicPath);
+            return new MusicFile(musicTag);
+        }
     }
 }

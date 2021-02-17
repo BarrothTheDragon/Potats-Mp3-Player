@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "eFweZ+Hw4ciw2DtVW6HQ3cM6VosbeVGoKyzuymMKgJdDKnWcU3VIQyXCKQ4b6nihD8s/gEDn4lNJNHk6z2mAbw==",
+  "dgSpecHash": "eu8272ijWO2sDG74/LTF+owBNqCgvXidpjqh1R3YZJLF7Dre+LHzJGaB1An33Ud8vom9j5/Uvul7NdpCenggVA==",
   "success": true,
-  "projectFilePath": "E:\\MyCode\\Potat's MP3 Player\\MusicPlayer\\MusicPlayerTest\\MusicPlayerTest.csproj",
+  "projectFilePath": "E:\\MyCode\\Potats-Mp3-Player\\MusicPlayer\\MusicPlayerTest\\MusicPlayerTest.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\delia\\.nuget\\packages\\autofixture\\4.14.0\\autofixture.4.14.0.nupkg.sha512",
     "C:\\Users\\delia\\.nuget\\packages\\coverlet.collector\\1.2.0\\coverlet.collector.1.2.0.nupkg.sha512",

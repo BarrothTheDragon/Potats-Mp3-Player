@@ -7,12 +7,22 @@ namespace MusicPlayer.RepositoryControl
     {
         private static readonly Lazy<SourceFileRepository> sourceFileRepository =
             new Lazy<SourceFileRepository>(() => new SourceFileRepository(GetSourceDirectoryFileAbsolutePath()));
+        private static readonly Lazy<MusicCollectionRepository> musicCollectionRepository =
+            new Lazy<MusicCollectionRepository>();
 
         public static SourceFileRepository GetSourceFileRepository
         {
             get
             {
                 return sourceFileRepository.Value;
+            }
+        }
+
+        public static MusicCollectionRepository GetMusicCollectionRepository
+        {
+            get
+            {
+                return musicCollectionRepository.Value;
             }
         }
 

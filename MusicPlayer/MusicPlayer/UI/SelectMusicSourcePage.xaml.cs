@@ -46,7 +46,7 @@ namespace MusicPlayer.UI
 
         private void OnClickDone(object sender, RoutedEventArgs e)
         {
-            //TODO save source directories
+            sourceFileRepository.SaveFile();
             var loadingPageUri = new Uri("UI/LoadingPage.xaml", UriKind.Relative);
             NavigationService.Navigate(loadingPageUri);
         }

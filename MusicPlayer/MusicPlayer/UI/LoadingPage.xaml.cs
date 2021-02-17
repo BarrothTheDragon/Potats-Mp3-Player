@@ -26,7 +26,6 @@ namespace MusicPlayer
             backgroundWorker.RunWorkerAsync();
         }
 
-
         private void NavigateToAlbumPage(object sender, RunWorkerCompletedEventArgs e)
         {
             //TODO routed to album page

@@ -2,7 +2,7 @@
 {
     interface IRepositoryController
     {
-        void CreateNewFile();
+        void CreateNewRepository();
         void AddEntry(string entry);
         void RemoveEntry(string entry);
         void RemoveAllEntries();

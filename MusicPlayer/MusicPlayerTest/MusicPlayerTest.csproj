@@ -20,13 +20,12 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="RepositoryControl\Kecap Tuyul - a simple dream.mp3" />
+    <Resource Include="RepositoryControl\Kecap Tuyul - the light always comes too late.mp3" />
     <Resource Include="RepositoryControl\SourceFileRepositoryTest.cs" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <None Update="RepositoryControl\SourceFileRepoTextFile.json">
+    <Resource Include="RepositoryControl\SourceFileRepoTextFile.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
+    </Resource>
   </ItemGroup>
 
 </Project>

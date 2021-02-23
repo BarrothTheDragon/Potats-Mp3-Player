@@ -1,5 +1,4 @@
 ﻿using Newtonsoft.Json;
-using System;
 using System.Collections.Generic;
 using System.IO;
 
@@ -17,7 +16,7 @@ namespace MusicPlayer.RepositoryControl
             InitializeRepository();
         }
 
-        public void CreateNewFile()
+        public void CreateNewRepository()
         {
             Directory.CreateDirectory(Path.GetDirectoryName(FilePath));
             File.Create(FilePath).Dispose();
@@ -52,7 +51,7 @@ namespace MusicPlayer.RepositoryControl
         {
             if (!File.Exists(FilePath))
             {
-                CreateNewFile();
+                CreateNewRepository();
             }
 
             SourceDirectories = DeserializeSourceDirectories() ?? new List<string>();

@@ -115,11 +115,12 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Controller\MusicLoader.cs" />
     <Compile Include="MusicPlayerElements\Album.cs" />
     <Compile Include="MusicPlayerElements\MusicFile.cs" />
     <Compile Include="RepositoryControl\IRepositoryController.cs" />
     <Compile Include="RepositoryControl\MusicCollectionRepository.cs" />
-    <Compile Include="RepositoryControl\MusicFileExtractor.cs" />
+    <Compile Include="Controller\MusicFileExtractor.cs" />
     <Compile Include="RepositoryControl\RepositoryController.cs" />
     <Compile Include="RepositoryControl\SourceFileRepository.cs" />
     <Compile Include="UI\SelectMusicSourcePage.xaml.cs">

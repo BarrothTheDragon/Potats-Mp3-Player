@@ -1,8 +1,7 @@
 ﻿using System;
 using System.ComponentModel;
-using System.Windows;
 using System.Windows.Controls;
-using MusicPlayer.RepositoryControl;
+using MusicPlayer.Controller;
 
 namespace MusicPlayer
 {
@@ -34,6 +33,6 @@ namespace MusicPlayer
         }
 
         private void WorkerBuildMusicCollection(object sender, DoWorkEventArgs e)
-            => RepositoryController.GetMusicCollectionRepository.BuildMusicCollection();
+            => MusicLoader.BuildMusicCollection();
     }
 }

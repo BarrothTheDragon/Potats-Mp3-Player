@@ -1,2 +1,2 @@
 language: csharp
-solution: MusicPlayer.sln
+solution: MusicPlayer/MusicPlayer.sln

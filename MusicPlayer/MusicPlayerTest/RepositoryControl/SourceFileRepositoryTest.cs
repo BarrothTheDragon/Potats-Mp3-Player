@@ -9,9 +9,10 @@ using FluentAssertions;
 namespace MusicPlayerTest.RepositoryControl
 {
     [TestClass]
+    [DeploymentItem(@"RepositoryControl/SourceFileRepoTextFile.json", "RepositoryControl")]
     public class SourceFileRepositoryTest
     {
-        private const string FilePath = "SourceFileRepoTextFile.json";
+        private const string FilePath = @"RepositoryControl/SourceFileRepoTextFile.json";
         private readonly Fixture fixture = new Fixture();
 
         /*
@@ -215,7 +216,7 @@ namespace MusicPlayerTest.RepositoryControl
 
         private SourceFileRepository InitializeSourceFileRepositoryWithEmptySourceDirectories()
         {
-            string absoluteFilePath = Path.GetFullPath(FilePath);
+            string absoluteFilePath = Path.GetFullPath(@"RepositoryControl/SourceFileRepoTextFile.json");
             var sourceFileRepository = new SourceFileRepository(absoluteFilePath);
             sourceFileRepository.RemoveAllEntries();
 

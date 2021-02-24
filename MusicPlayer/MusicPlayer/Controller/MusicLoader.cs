@@ -7,11 +7,6 @@ namespace MusicPlayer.Controller
         readonly static MusicCollectionRepository sourceFileRepository = RepositoryController.GetMusicCollectionRepository;
 
         public static void BuildMusicCollection()
-        {
-            foreach (string filePath in new MusicFileExtractor().GetAllMusicFiles())
-            {
-                sourceFileRepository.AddEntry(filePath);
-            }
-        }
+            => new MusicFileExtractor().GetAllMusicFiles().ForEach(filePath => sourceFileRepository.AddEntry(filePath));
     }
 }

@@ -30,9 +30,9 @@ namespace MusicPlayer.RepositoryControl
         {
             var musicFile = ConvertToMusicFile(entry);
             var album = GetAlbumByTitle(musicFile.AlbumTitle);
-            if(album != null)
+            if (album != null)
             {
-                album.SongList.Remove(musicFile);
+                album.SongList.RemoveAll(song => song.Path == musicFile.Path);
             }
         }
 

@@ -1,6 +1,4 @@
 ﻿using System;
-using TagLib;
-using System.IO;
 
 namespace MusicPlayer.MusicPlayerElements
 {
@@ -30,7 +28,7 @@ namespace MusicPlayer.MusicPlayerElements
         {
             Path = musicFile.Name;
             AlbumTitle = GetValidAlbumTitle(musicFile.Tag.Album);
-            AlbumArtist = GetValidArtists(musicFile.Tag.AlbumArtists);
+            AlbumArtist = GetValidAlbumArtists(musicFile.Tag.AlbumArtists, musicFile.Tag.Performers);
             SongTitle = musicFile.Tag.Title ?? System.IO.Path.GetFileNameWithoutExtension(musicFile.Name);
             SongArtist = GetValidArtists(musicFile.Tag.Performers);
             Genre = GetValidGenre(musicFile.Tag.Genres);
@@ -42,6 +40,20 @@ namespace MusicPlayer.MusicPlayerElements
 
         private string GetValidAlbumTitle(string currentAlbumTitle)
             => (currentAlbumTitle == null || currentAlbumTitle == "Unknown Album") ? DefaultAlbumTitle : currentAlbumTitle;
+
+        private string[] GetValidAlbumArtists(string[] albumArtists, string[] songArtist)
+        {
+            if (GetValidArtists(albumArtists) != DefaultArtist)
+            {
+                return albumArtists;
+            }
+            else if (GetValidArtists(songArtist) != DefaultArtist)
+            {
+                return songArtist;
+            }
+
+            return DefaultArtist;
+        }
 
 
         private string[] GetValidArtists(string[] currentArtists)

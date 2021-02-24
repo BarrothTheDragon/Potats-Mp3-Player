@@ -209,7 +209,6 @@ E:\MyCode\Potat's MP3 Player\MusicPlayer\MusicPlayerTest\obj\Debug\netcoreapp3.1
 E:\MyCode\Potats-Mp3-Player\MusicPlayer\MusicPlayerTest\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
 E:\MyCode\Potats-Mp3-Player\MusicPlayer\MusicPlayerTest\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
 E:\MyCode\Potats-Mp3-Player\MusicPlayer\MusicPlayerTest\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
-E:\MyCode\Potats-Mp3-Player\MusicPlayer\MusicPlayerTest\bin\Debug\netcoreapp3.1\RepositoryControl\SourceFileRepoTextFile.json
 E:\MyCode\Potats-Mp3-Player\MusicPlayer\MusicPlayerTest\bin\Debug\netcoreapp3.1\MusicPlayerTest.deps.json
 E:\MyCode\Potats-Mp3-Player\MusicPlayer\MusicPlayerTest\bin\Debug\netcoreapp3.1\MusicPlayerTest.runtimeconfig.json
 E:\MyCode\Potats-Mp3-Player\MusicPlayer\MusicPlayerTest\bin\Debug\netcoreapp3.1\MusicPlayerTest.runtimeconfig.dev.json
@@ -311,5 +310,7 @@ E:\MyCode\Potats-Mp3-Player\MusicPlayer\MusicPlayerTest\obj\Debug\netcoreapp3.1\
 E:\MyCode\Potats-Mp3-Player\MusicPlayer\MusicPlayerTest\obj\Debug\netcoreapp3.1\MusicPlayerTest.pdb
 E:\MyCode\Potats-Mp3-Player\MusicPlayer\MusicPlayerTest\obj\Debug\netcoreapp3.1\MusicPlayerTest.genruntimeconfig.cache
 E:\MyCode\Potats-Mp3-Player\MusicPlayer\MusicPlayerTest\bin\Debug\netcoreapp3.1\TagLibSharp.dll
-E:\MyCode\Potats-Mp3-Player\MusicPlayer\MusicPlayerTest\bin\Debug\netcoreapp3.1\TagLibSharp.pdb
-E:\MyCode\Potats-Mp3-Player\MusicPlayer\MusicPlayerTest\bin\Debug\netcoreapp3.1\TagLibSharp.xml
+E:\MyCode\Potats-Mp3-Player\MusicPlayer\MusicPlayerTest\bin\Debug\netcoreapp3.1\testhost.exe
+E:\MyCode\Potats-Mp3-Player\MusicPlayer\MusicPlayerTest\bin\Debug\netcoreapp3.1\RepositoryControl\Kecap Tuyul - a simple dream.mp3
+E:\MyCode\Potats-Mp3-Player\MusicPlayer\MusicPlayerTest\bin\Debug\netcoreapp3.1\RepositoryControl\SourceFileRepoTextFile.json
+E:\MyCode\Potats-Mp3-Player\MusicPlayer\MusicPlayerTest\bin\Debug\netcoreapp3.1\RepositoryControl\Kecap Tuyul - the light always comes too late.mp3

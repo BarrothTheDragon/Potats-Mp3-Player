@@ -39,16 +39,25 @@
                 <DataTemplate>
                     <Grid>
                         <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="350"/>
                             <ColumnDefinition Width="*"/>
                         </Grid.ColumnDefinitions>
                         <Grid.RowDefinitions>
-                            <RowDefinition Height="50"/>
+                            <RowDefinition Height="150"/>
                         </Grid.RowDefinitions>
                         <TextBlock
+                            Grid.Column="0"
                             FontSize="20"
                             Style="{StaticResource TitleLabelStyle}"
                             HorizontalAlignment="Left"
                             Text="{Binding Title}"/>
+                        <Image 
+                            Grid.Column="1"
+                            RenderOptions.BitmapScalingMode="NearestNeighbor" 
+                            RenderOptions.EdgeMode="Aliased" 
+                            x:Name="Image"
+                            Source="{Binding Cover}"></Image>
+
                     </Grid>
                 </DataTemplate>
             </ListBox.ItemTemplate>

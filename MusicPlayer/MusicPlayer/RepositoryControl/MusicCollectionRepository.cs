@@ -19,7 +19,7 @@ namespace MusicPlayer.RepositoryControl
         public void AddEntry(string entry)
         {
             var musicFile = ConvertToMusicFile(entry);
-            var album = GetAlbumByTitle(musicFile.AlbumTitle) ?? InitializeNewAlbum(musicFile);
+            var album = GetAlbumByTitle(musicFile.AlbumTitle) ?? InitializeNewAlbum(musicFile, entry);
             album.SongList.Add(musicFile);
         }
 
@@ -45,9 +45,9 @@ namespace MusicPlayer.RepositoryControl
             return new MusicFile(musicTag);
         }
 
-        private Album InitializeNewAlbum(MusicFile file)
+        private Album InitializeNewAlbum(MusicFile musicFile, string tagFile)
         {
-            var album = new Album(file);
+            var album = new Album(musicFile, TagLib.File.Create(tagFile));
             AlbumCollection.Add(album);
             return album;
         }

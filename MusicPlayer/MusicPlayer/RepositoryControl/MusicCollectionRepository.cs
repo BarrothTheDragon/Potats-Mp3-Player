@@ -6,7 +6,7 @@ namespace MusicPlayer.RepositoryControl
 {
     public class MusicCollectionRepository : IRepositoryController
     {
-        public static HashSet<Album> AlbumCollection { get; private set; }
+        public HashSet<Album> AlbumCollection { get; private set; }
 
         public MusicCollectionRepository()
         {

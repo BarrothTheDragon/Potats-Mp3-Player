@@ -200,3 +200,6 @@ E:\MyCode\Potats-Mp3-Player\MusicPlayer\MusicPlayer\obj\Debug\MusicPlayer.csproj
 E:\MyCode\Potats-Mp3-Player\MusicPlayer\MusicPlayer\obj\Debug\MusicPlayer.csproj.CopyComplete
 E:\MyCode\Potats-Mp3-Player\MusicPlayer\MusicPlayer\obj\Debug\MusicPlayer.exe
 E:\MyCode\Potats-Mp3-Player\MusicPlayer\MusicPlayer\obj\Debug\MusicPlayer.pdb
+E:\MyCode\Potats-Mp3-Player\MusicPlayer\MusicPlayer\obj\Debug\UI\MainMenuPage.g.cs
+E:\MyCode\Potats-Mp3-Player\MusicPlayer\MusicPlayer\obj\Debug\MusicPlayer_MarkupCompile.lref
+E:\MyCode\Potats-Mp3-Player\MusicPlayer\MusicPlayer\obj\Debug\UI\MainMenuPage.baml

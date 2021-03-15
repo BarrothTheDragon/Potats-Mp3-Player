@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 E:\MyCode\Potats-Mp3-Player\MusicPlayer\MusicPlayer\App.xaml
-4374024061
+5-1362028846
 
-17-1070372937
+18-1286938754
 291304428051
-UI\LoadingPage.xaml;MainWindow.xaml;UI\SelectMusicSourcePage.xaml;UI\TitlePage.xaml;
+UI\LoadingPage.xaml;MainWindow.xaml;UI\MainMenuPage.xaml;UI\SelectMusicSourcePage.xaml;UI\TitlePage.xaml;
 
-False
+True
 

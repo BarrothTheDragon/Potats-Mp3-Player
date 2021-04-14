@@ -25,7 +25,12 @@ namespace MusicPlayer.MusicPlayerElements
             {
                 CoverArt = (byte[])(tagFile.Tag.Pictures[0].Data.Data);
                 Cover = LoadImage(CoverArt);
-                //PreviewPictureBox.Image = Image.FromStream(new MemoryStream(bin)).GetThumbnailImage(100, 100, null, IntPtr.Zero);
+            }
+            else
+            {
+                /*var pathToDefaultImage = Path.Combine(Directory.GetParent(System.IO.Directory.GetCurrentDirectory()).Parent.FullName, "Assets\\WelcomePotat.png");
+                Cover = new BitmapImage(new System.Uri(pathToDefaultImage));
+                Cover.Freeze();*/
             }
 
             SongList = new List<MusicFile>();
@@ -33,7 +38,11 @@ namespace MusicPlayer.MusicPlayerElements
 
         private static BitmapImage LoadImage(byte[] imageData)
         {
-            if (imageData == null || imageData.Length == 0) return null;
+            if (imageData == null || imageData.Length == 0)
+            {
+                return null;
+            }
+
             var image = new BitmapImage();
             using (var mem = new MemoryStream(imageData))
             {

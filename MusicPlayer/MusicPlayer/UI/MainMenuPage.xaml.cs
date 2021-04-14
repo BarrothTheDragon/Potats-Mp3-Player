@@ -14,6 +14,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using MusicPlayer.RepositoryControl;
+using System.IO;
 
 namespace MusicPlayer.UI
 {
@@ -23,11 +24,21 @@ namespace MusicPlayer.UI
     public partial class MainMenuPage : Page
     {
         readonly MusicCollectionRepository musicCollectionRepository = RepositoryController.GetMusicCollectionRepository;
+        private static BitmapImage DefaultAlbumCoverW = GetDefaultAlbumCover();
+        public BitmapImage DefaultAlbumCover { get { return DefaultAlbumCoverW; } }
 
         public MainMenuPage()
         {
             InitializeComponent();
-            m_albumCollectionListBox.ItemsSource = musicCollectionRepository.AlbumCollection;
+            m_albumCollectionItemsControl.ItemsSource = musicCollectionRepository.AlbumCollection;
+        }
+
+        private static BitmapImage GetDefaultAlbumCover()
+        {
+            var pathToDefaultImage = System.IO.Path.Combine(Directory.GetParent(System.IO.Directory.GetCurrentDirectory()).Parent.FullName, "Assets\\WelcomePotat.png");
+            var cover = new BitmapImage(new System.Uri(pathToDefaultImage));
+            cover.Freeze();
+            return cover;
         }
     }
 }

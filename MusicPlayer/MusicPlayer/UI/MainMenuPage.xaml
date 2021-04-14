@@ -80,8 +80,14 @@
                                 VerticalAlignment="Center"
                                 Stretch="Fill"
                                 UseLayoutRounding="True"
-                                RenderOptions.BitmapScalingMode="Fant"
-                                Source="{Binding Cover}">
+                                RenderOptions.BitmapScalingMode="Fant">
+                                <Image.Source>
+                                    <Binding Path="Cover" >
+                                        <Binding.TargetNullValue>
+                                            <ImageSource>/Assets/WelcomePotat.png</ImageSource>
+                                        </Binding.TargetNullValue>
+                                    </Binding>
+                                </Image.Source>
                                 <Image.Clip>
                                     <RectangleGeometry RadiusX="15"
                                            RadiusY="15"
@@ -91,9 +97,6 @@
                                     <Style TargetType="{x:Type Image}">
                                         <Setter Property="Opacity" Value="1"/>
                                         <Style.Triggers>
-                                            <DataTrigger Binding="{Binding Cover}" Value="{x:Null}">
-                                                <Setter Property="Source" Value="{Binding Path=DefaultAlbumCover}" />
-                                            </DataTrigger>
                                             <DataTrigger Binding="{Binding RelativeSource={RelativeSource AncestorType=Grid,AncestorLevel=1}, Path=IsMouseOver}" Value="True" >
                                                 <Setter Property="Opacity" Value="0.6"/>
                                             </DataTrigger>
@@ -154,10 +157,7 @@
                                 </Polygon.Style>
                             </Polygon>
 
-                            
-
                             <TextBlock 
-                                Foreground="Black"
                                 Margin="5"
                                 FontSize="15"
                                 HorizontalAlignment="Left"
@@ -171,6 +171,10 @@
                                     <Style TargetType="{x:Type TextBlock}">
                                         <Setter Property="Visibility" Value="Collapsed"/>
                                         <Style.Triggers>
+                                            <DataTrigger Binding="{Binding Cover}" Value="{x:Null}">
+                                                <Setter Property="Foreground" Value="Yellow"/>
+                                                <Setter Property="Visibility" Value="Visible" />
+                                            </DataTrigger>
                                             <DataTrigger Binding="{Binding RelativeSource={RelativeSource AncestorType=Grid,AncestorLevel=1}, Path=IsMouseOver}" Value="True" >
                                                 <Setter Property="Visibility" Value="Visible" />
                                                 <DataTrigger.EnterActions>

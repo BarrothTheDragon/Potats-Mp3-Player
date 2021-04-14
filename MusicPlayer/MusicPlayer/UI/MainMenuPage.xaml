@@ -84,7 +84,7 @@
                                 <Image.Source>
                                     <Binding Path="Cover" >
                                         <Binding.TargetNullValue>
-                                            <ImageSource>/Assets/WelcomePotat.png</ImageSource>
+                                            <ImageSource>pack://siteoforigin:,,,/Assets/WelcomePotat.png</ImageSource>
                                         </Binding.TargetNullValue>
                                     </Binding>
                                 </Image.Source>
@@ -172,7 +172,6 @@
                                         <Setter Property="Visibility" Value="Collapsed"/>
                                         <Style.Triggers>
                                             <DataTrigger Binding="{Binding Cover}" Value="{x:Null}">
-                                                <Setter Property="Foreground" Value="Yellow"/>
                                                 <Setter Property="Visibility" Value="Visible" />
                                             </DataTrigger>
                                             <DataTrigger Binding="{Binding RelativeSource={RelativeSource AncestorType=Grid,AncestorLevel=1}, Path=IsMouseOver}" Value="True" >

@@ -207,7 +207,9 @@
     <Resource Include="Assets\WelcomeBackground.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Assets\WelcomePotat.png" />
+    <EmbeddedResource Include="Assets\WelcomePotat.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Assets\Add.png" />

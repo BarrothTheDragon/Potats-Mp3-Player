@@ -123,6 +123,7 @@
     <Compile Include="Controller\MusicFileExtractor.cs" />
     <Compile Include="RepositoryControl\RepositoryController.cs" />
     <Compile Include="RepositoryControl\SourceFileRepository.cs" />
+    <Compile Include="UI\Converters\ByteArrayToImageConverter.cs" />
     <Compile Include="UI\MainMenuPage.xaml.cs">
       <DependentUpon>MainMenuPage.xaml</DependentUpon>
     </Compile>

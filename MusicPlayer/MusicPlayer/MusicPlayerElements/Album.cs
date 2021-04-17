@@ -12,8 +12,7 @@ namespace MusicPlayer.MusicPlayerElements
         public string[] Genre { get; set; }
 
         //TODO get cover art
-        public byte[] CoverArt { get; set; }
-        public BitmapImage Cover { get; set; }
+        public byte[] Cover { get; set; }
 
         public Album(MusicFile musicFile, TagLib.File tagFile)
         {
@@ -23,8 +22,8 @@ namespace MusicPlayer.MusicPlayerElements
 
             if (tagFile.Tag.Pictures.Length >= 1)
             {
-                CoverArt = (byte[])(tagFile.Tag.Pictures[0].Data.Data);
-                Cover = LoadImage(CoverArt);
+                Cover = (byte[])(tagFile.Tag.Pictures[0].Data.Data);
+                //Cover = LoadImage(CoverArt);
             }
             else
             {

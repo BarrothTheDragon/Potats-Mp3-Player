@@ -204,3 +204,4 @@ E:\MyCode\Potats-Mp3-Player\MusicPlayer\MusicPlayer\obj\Debug\UI\MainMenuPage.g.
 E:\MyCode\Potats-Mp3-Player\MusicPlayer\MusicPlayer\obj\Debug\MusicPlayer_MarkupCompile.lref
 E:\MyCode\Potats-Mp3-Player\MusicPlayer\MusicPlayer\obj\Debug\UI\MainMenuPage.baml
 E:\MyCode\Potats-Mp3-Player\MusicPlayer\MusicPlayer\bin\Debug\Assets\WelcomePotat.png
+E:\MyCode\Potats-Mp3-Player\MusicPlayer\MusicPlayer\obj\Debug\GeneratedInternalTypeHelper.g.cs

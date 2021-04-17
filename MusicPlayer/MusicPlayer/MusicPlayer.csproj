@@ -117,6 +117,7 @@
     </ApplicationDefinition>
     <Compile Include="Controller\MusicLoader.cs" />
     <Compile Include="MusicPlayerElements\Album.cs" />
+    <Compile Include="MusicPlayerElements\DefaultAlbumResources.cs" />
     <Compile Include="MusicPlayerElements\MusicFile.cs" />
     <Compile Include="RepositoryControl\IRepositoryController.cs" />
     <Compile Include="RepositoryControl\MusicCollectionRepository.cs" />

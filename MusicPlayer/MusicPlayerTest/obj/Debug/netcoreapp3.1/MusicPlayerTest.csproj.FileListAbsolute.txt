@@ -315,3 +315,8 @@ E:\MyCode\Potats-Mp3-Player\MusicPlayer\MusicPlayerTest\bin\Debug\netcoreapp3.1\
 E:\MyCode\Potats-Mp3-Player\MusicPlayer\MusicPlayerTest\bin\Debug\netcoreapp3.1\RepositoryControl\SourceFileRepoTextFile.json
 E:\MyCode\Potats-Mp3-Player\MusicPlayer\MusicPlayerTest\bin\Debug\netcoreapp3.1\RepositoryControl\Kecap Tuyul - the light always comes too late.mp3
 E:\MyCode\Potats-Mp3-Player\MusicPlayer\MusicPlayerTest\bin\Debug\netcoreapp3.1\Assets\WelcomePotat.png
+E:\MyCode\Potats-Mp3-Player\MusicPlayer\MusicPlayerTest\bin\Debug\netcoreapp3.1\Microsoft.Win32.SystemEvents.dll
+E:\MyCode\Potats-Mp3-Player\MusicPlayer\MusicPlayerTest\bin\Debug\netcoreapp3.1\System.Drawing.Common.dll
+E:\MyCode\Potats-Mp3-Player\MusicPlayer\MusicPlayerTest\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp3.0\Microsoft.Win32.SystemEvents.dll
+E:\MyCode\Potats-Mp3-Player\MusicPlayer\MusicPlayerTest\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp3.0\System.Drawing.Common.dll
+E:\MyCode\Potats-Mp3-Player\MusicPlayer\MusicPlayerTest\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp3.0\System.Drawing.Common.dll

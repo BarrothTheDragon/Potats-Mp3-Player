@@ -64,6 +64,10 @@
               "target": "Package",
               "version": "[16.9.1, )"
             },
+            "System.Drawing.Common": {
+              "target": "Package",
+              "version": "[4.7.0, )"
+            },
             "TagLibSharp": {
               "target": "Package",
               "version": "[2.2.0, )"

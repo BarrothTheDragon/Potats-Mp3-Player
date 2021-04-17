@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Drawing;
-using System.Drawing.Imaging;
 using System.IO;
-using System.Linq;
-using System.Windows.Media.Imaging;
 
 namespace MusicPlayer.MusicPlayerElements
 {
@@ -26,6 +22,8 @@ namespace MusicPlayer.MusicPlayerElements
             Cover = (tagFile.Tag.Pictures.Length >= 1) ? CreateThumbnail(tagFile.Tag.Pictures[0].Data.Data, 200) : null;
         }
 
+        //credits to Gary Frank
+        //https://social.msdn.microsoft.com/Forums/vstudio/en-US/e2d8bd99-1af4-404a-a6bd-5fae9f540c2d/how-to-resize-an-image-in-byte-?forum=csharpgeneral
         public static byte[] CreateThumbnail(byte[] PassedImage, int LargestSide)
         {
             byte[] ReturnedThumbnail;

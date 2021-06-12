@@ -230,3 +230,5 @@ _Pvt_Extensions
 .fake/
 *.binlog
 /.dotnet
+
+MusicPlayer/MusicPlayer/[Oo]bj

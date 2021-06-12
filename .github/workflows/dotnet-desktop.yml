@@ -78,6 +78,8 @@ jobs:
       uses: microsoft/setup-msbuild@v1.0.2
 
     # Execute all unit tests in the solution
+    - name: display test repo
+      run: echo $Test_Project_Path
     - name: Execute unit tests
       run: dotnet test
 

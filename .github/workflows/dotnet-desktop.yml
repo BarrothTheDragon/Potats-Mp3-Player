@@ -79,7 +79,6 @@ jobs:
 
     # Execute all unit tests in the solution
     - name: display test repo
-      run: echo $Test_Project_Path
       run: dotnet build "MusicPlayer\MusicPlayer.csproj"
     - name: Execute unit tests
       run: dotnet test

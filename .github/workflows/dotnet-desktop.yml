@@ -78,8 +78,6 @@ jobs:
       uses: microsoft/setup-msbuild@v1.0.2
 
     # Execute all unit tests in the solution
-    - name: display test repo
-      run: dotnet build "MusicPlayer\MusicPlayer.csproj"
     - name: Execute unit tests
       run: dotnet test
 

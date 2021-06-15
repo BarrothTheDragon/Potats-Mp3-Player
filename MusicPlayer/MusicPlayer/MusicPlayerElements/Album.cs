@@ -10,7 +10,6 @@ namespace MusicPlayer.MusicPlayerElements
         public string Title { get; set; }
         public string[] Artists { get; set; }
         public string[] Genre { get; set; }
-
         public byte[] Cover { get; set; }
 
         public Album(MusicFile musicFile, TagLib.File tagFile)

@@ -301,7 +301,6 @@ E:\MyCode\Potats-Mp3-Player\MusicPlayer\MusicPlayerTest\bin\Debug\netcoreapp3.1\
 E:\MyCode\Potats-Mp3-Player\MusicPlayer\MusicPlayerTest\bin\Debug\netcoreapp3.1\MusicPlayer.exe
 E:\MyCode\Potats-Mp3-Player\MusicPlayer\MusicPlayerTest\bin\Debug\netcoreapp3.1\MusicPlayer.pdb
 E:\MyCode\Potats-Mp3-Player\MusicPlayer\MusicPlayerTest\bin\Debug\netcoreapp3.1\MusicPlayer.exe.config
-E:\MyCode\Potats-Mp3-Player\MusicPlayer\MusicPlayerTest\obj\Debug\netcoreapp3.1\MusicPlayerTest.csprojAssemblyReference.cache
 E:\MyCode\Potats-Mp3-Player\MusicPlayer\MusicPlayerTest\obj\Debug\netcoreapp3.1\MusicPlayerTest.AssemblyInfoInputs.cache
 E:\MyCode\Potats-Mp3-Player\MusicPlayer\MusicPlayerTest\obj\Debug\netcoreapp3.1\MusicPlayerTest.AssemblyInfo.cs
 E:\MyCode\Potats-Mp3-Player\MusicPlayer\MusicPlayerTest\obj\Debug\netcoreapp3.1\MusicPlayerTest.csproj.CoreCompileInputs.cache
@@ -320,3 +319,4 @@ E:\MyCode\Potats-Mp3-Player\MusicPlayer\MusicPlayerTest\bin\Debug\netcoreapp3.1\
 E:\MyCode\Potats-Mp3-Player\MusicPlayer\MusicPlayerTest\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp3.0\Microsoft.Win32.SystemEvents.dll
 E:\MyCode\Potats-Mp3-Player\MusicPlayer\MusicPlayerTest\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp3.0\System.Drawing.Common.dll
 E:\MyCode\Potats-Mp3-Player\MusicPlayer\MusicPlayerTest\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp3.0\System.Drawing.Common.dll
+E:\MyCode\Potats-Mp3-Player\MusicPlayer\MusicPlayerTest\obj\Debug\netcoreapp3.1\MusicPlayerTest.csproj.AssemblyReference.cache

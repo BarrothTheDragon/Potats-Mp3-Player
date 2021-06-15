@@ -16,9 +16,7 @@ namespace MusicPlayer.MusicPlayerElements
         public TimeSpan Duration { get; set; }
 
         public MusicFile(string path)
-        {
-            Path = path;
-        }
+            => Path = path;
 
         public MusicFile(TagLib.File musicFile)
         {

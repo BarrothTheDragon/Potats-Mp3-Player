@@ -9,9 +9,7 @@ namespace MusicPlayer.RepositoryControl
         public HashSet<Album> AlbumCollection { get; private set; }
 
         public MusicCollectionRepository()
-        {
-            AlbumCollection = new HashSet<Album>();
-        }
+            => AlbumCollection = new HashSet<Album>();
 
         public void CreateNewRepository()
             => AlbumCollection = new HashSet<Album>();

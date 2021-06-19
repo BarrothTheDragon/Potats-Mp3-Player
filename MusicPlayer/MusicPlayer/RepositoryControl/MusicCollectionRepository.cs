@@ -9,15 +9,18 @@ namespace MusicPlayer.RepositoryControl
         public HashSet<Album> AlbumCollection { get; private set; }
 
         public MusicCollectionRepository()
-            => AlbumCollection = new HashSet<Album>();
+        {
+            AlbumCollection = new HashSet<Album>();
+        }
 
         public void CreateNewRepository()
             => AlbumCollection = new HashSet<Album>();
 
         public void AddEntry(string entry)
         {
-            var musicFile = ConvertToMusicFile(entry);
-            var album = GetAlbumByTitle(musicFile.AlbumTitle) ?? InitializeNewAlbum(musicFile, entry);
+            var tagFile = TagLib.File.Create(entry);
+            var musicFile = new MusicFile(tagFile);
+            var album = GetAlbumByTitle(musicFile.AlbumTitle) ?? InitializeNewAlbum(tagFile);
             album.SongList.Add(musicFile);
         }
 
@@ -43,9 +46,9 @@ namespace MusicPlayer.RepositoryControl
             return new MusicFile(musicTag);
         }
 
-        private Album InitializeNewAlbum(MusicFile musicFile, string tagFile)
+        private Album InitializeNewAlbum(TagLib.File tagFile)
         {
-            var album = new Album(musicFile, TagLib.File.Create(tagFile));
+            var album = new Album(tagFile);
             AlbumCollection.Add(album);
             return album;
         }

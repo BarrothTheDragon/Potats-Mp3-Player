@@ -26,23 +26,9 @@ namespace MusicPlayer.MusicPlayerElements
 
 
         internal static string[] GetValidArtists(string[] currentArtists)
-        {
-            if (currentArtists == null || currentArtists.Length == 0 || currentArtists[0] == "Unknown Artist")
-            {
-                return DefaultArtist;
-            }
-
-            return currentArtists;
-        }
+            => (currentArtists == null || currentArtists.Length == 0 || currentArtists[0] == "Unknown Artist") ? DefaultArtist : currentArtists;
 
         internal static string[] GetValidGenre(string[] currentGenre)
-        {
-            if (currentGenre == null || currentGenre.Length == 0 || currentGenre[0] == "Unknown Genre")
-            {
-                return DefaultGenre;
-            }
-
-            return currentGenre;
-        }
+            => (currentGenre == null || currentGenre.Length == 0 || currentGenre[0] == "Unknown Genre") ? DefaultGenre : currentGenre;
     }
 }

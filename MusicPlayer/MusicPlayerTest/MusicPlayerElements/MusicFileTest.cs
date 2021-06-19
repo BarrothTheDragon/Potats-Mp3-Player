@@ -23,13 +23,9 @@ namespace MusicPlayerTest.MusicPlayerElements
             //Assert 
             musicFile.Path.Should().Be(ValidMp3FilePath);
             musicFile.AlbumTitle.Should().Be("My other shadow");
-            musicFile.AlbumArtist.Length.Should().Be(1);
-            musicFile.AlbumArtist[0].Should().Be("Kecap Tuyul");
             musicFile.SongTitle.Should().Be("a simple dream");
             musicFile.SongArtist.Length.Should().Be(1);
             musicFile.SongArtist[0].Should().Be("Kecap Tuyul");
-            musicFile.Genre.Length.Should().Be(1);
-            musicFile.Genre[0].Should().Be("Experimental");
             musicFile.Year.Should().Be(2012);
             musicFile.Disk.Should().Be(0);
             musicFile.Track.Should().Be(4);
@@ -50,13 +46,9 @@ namespace MusicPlayerTest.MusicPlayerElements
             //Assert 
             musicFile.Path.Should().Be(InvalidMp3FilePath);
             musicFile.AlbumTitle.Should().Be("Potat's Album");
-            musicFile.AlbumArtist.Length.Should().Be(1);
-            musicFile.AlbumArtist[0].Should().Be("Potat");
             musicFile.SongTitle.Should().Be("Kecap Tuyul - the light always comes too late");
             musicFile.SongArtist.Length.Should().Be(1);
             musicFile.SongArtist[0].Should().Be("Potat");
-            musicFile.Genre.Length.Should().Be(1);
-            musicFile.Genre[0].Should().Be("Potat's Music");
             musicFile.Year.Should().Be(0);
             musicFile.Disk.Should().Be(0);
             musicFile.Track.Should().Be(0);

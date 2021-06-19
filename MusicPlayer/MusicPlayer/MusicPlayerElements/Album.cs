@@ -12,11 +12,11 @@ namespace MusicPlayer.MusicPlayerElements
         public string[] Genre { get; set; }
         public byte[] Cover { get; set; }
 
-        public Album(MusicFile musicFile, TagLib.File tagFile)
+        public Album(TagLib.File tagFile)
         {
-            Title = musicFile.AlbumTitle;
-            Artists = musicFile.AlbumArtist;
-            Genre = musicFile.Genre;
+            Title = DefaultAlbumResources.GetValidAlbumTitle(tagFile.Tag.Album);
+            Artists = DefaultAlbumResources.GetValidAlbumArtists(tagFile.Tag.AlbumArtists, tagFile.Tag.Performers);
+            Genre = DefaultAlbumResources.GetValidGenre(tagFile.Tag.Genres);
             SongList = new List<MusicFile>();
             Cover = (tagFile.Tag.Pictures.Length >= 1) ? CreateThumbnail(tagFile.Tag.Pictures[0].Data.Data, 200) : null;
         }

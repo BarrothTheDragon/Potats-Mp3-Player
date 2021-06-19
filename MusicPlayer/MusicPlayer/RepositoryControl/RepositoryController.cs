@@ -11,20 +11,10 @@ namespace MusicPlayer.RepositoryControl
             new Lazy<MusicCollectionRepository>();
 
         public static SourceFileRepository GetSourceFileRepository
-        {
-            get
-            {
-                return sourceFileRepository.Value;
-            }
-        }
+            => sourceFileRepository.Value;
 
         public static MusicCollectionRepository GetMusicCollectionRepository
-        {
-            get
-            {
-                return musicCollectionRepository.Value;
-            }
-        }
+            => musicCollectionRepository.Value;
 
         // https://www.c-sharpcorner.com/UploadFile/8911c4/singleton-design-pattern-in-C-Sharp/
         private static string GetSourceDirectoryFileAbsolutePath()

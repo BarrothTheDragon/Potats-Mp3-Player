@@ -4,9 +4,9 @@ namespace MusicPlayer.Controller
 {
     class MusicLoader
     {
-        readonly static MusicCollectionRepository sourceFileRepository = RepositoryController.GetMusicCollectionRepository;
+        readonly static MusicCollectionRepository musicCollectionRepository = RepositoryController.GetMusicCollectionRepository;
 
         public static void BuildMusicCollection()
-            => new MusicFileExtractor().GetAllMusicFiles().ForEach(filePath => sourceFileRepository.AddEntry(filePath));
+            => new MusicFileExtractor().GetAllMusicFiles().ForEach(filePath => musicCollectionRepository.AddEntry(filePath));
     }
 }

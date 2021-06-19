@@ -33,7 +33,7 @@ namespace MusicPlayerTest.RepositoryControl
             musicCollectionRepository.CreateNewRepository();
 
             //Assert
-            MusicCollectionRepository.AlbumCollection.Should().BeEmpty();
+            musicCollectionRepository.AlbumCollection.Should().BeEmpty();
         }
 
         /*
@@ -49,7 +49,7 @@ namespace MusicPlayerTest.RepositoryControl
             musicCollectionRepository.AddEntry(ValidMp3FilePath);
 
             //Assert
-            MusicCollectionRepository.AlbumCollection.Count.Should().Be(1);
+            musicCollectionRepository.AlbumCollection.Count.Should().Be(1);
             musicCollectionRepository.GetAlbumByTitle(ValidAlbumTitle).Should().NotBeNull();
             musicCollectionRepository.GetAlbumByTitle(ValidAlbumTitle).SongList[0].SongTitle.Should().Be(ValidSongTitle);
         }
@@ -64,7 +64,7 @@ namespace MusicPlayerTest.RepositoryControl
             musicCollectionRepository.AddEntry(InvalidMp3FilePath);
 
             //Assert
-            MusicCollectionRepository.AlbumCollection.Count.Should().Be(1);
+            musicCollectionRepository.AlbumCollection.Count.Should().Be(1);
             musicCollectionRepository.GetAlbumByTitle(InvalidAlbumTitle).Should().NotBeNull();
             musicCollectionRepository.GetAlbumByTitle(InvalidAlbumTitle).SongList[0].SongTitle.Should().Be(InvalidSongTitle);
         }
@@ -80,7 +80,7 @@ namespace MusicPlayerTest.RepositoryControl
             musicCollectionRepository.AddEntry(ValidMp3FilePath);
 
             //Assert
-            MusicCollectionRepository.AlbumCollection.Count.Should().Be(1);
+            musicCollectionRepository.AlbumCollection.Count.Should().Be(1);
             musicCollectionRepository.GetAlbumByTitle(ValidAlbumTitle).Should().NotBeNull();
             musicCollectionRepository.GetAlbumByTitle(ValidAlbumTitle).SongList[0].SongTitle.Should().Be(ValidSongTitle);
             musicCollectionRepository.GetAlbumByTitle(ValidAlbumTitle).SongList[1].SongTitle.Should().Be(ValidSongTitle);
@@ -97,7 +97,7 @@ namespace MusicPlayerTest.RepositoryControl
             musicCollectionRepository.AddEntry(InvalidMp3FilePath);
 
             //Assert
-            MusicCollectionRepository.AlbumCollection.Count.Should().Be(2);
+            musicCollectionRepository.AlbumCollection.Count.Should().Be(2);
             musicCollectionRepository.GetAlbumByTitle(ValidAlbumTitle).Should().NotBeNull();
             musicCollectionRepository.GetAlbumByTitle(InvalidAlbumTitle).Should().NotBeNull();
             musicCollectionRepository.GetAlbumByTitle(ValidAlbumTitle).SongList[0].SongTitle.Should().Be(ValidSongTitle);
@@ -148,7 +148,7 @@ namespace MusicPlayerTest.RepositoryControl
             musicCollectionRepository.RemoveEntry(ValidMp3FilePath);
 
             //Assert
-            MusicCollectionRepository.AlbumCollection.Count.Should().Be(1);
+            musicCollectionRepository.AlbumCollection.Count.Should().Be(1);
             musicCollectionRepository.GetAlbumByTitle(ValidAlbumTitle).SongList.Should().BeEmpty();
         }
 
@@ -163,7 +163,7 @@ namespace MusicPlayerTest.RepositoryControl
             musicCollectionRepository.RemoveEntry(InvalidMp3FilePath);
 
             //Assert
-            MusicCollectionRepository.AlbumCollection.Count.Should().Be(1);
+            musicCollectionRepository.AlbumCollection.Count.Should().Be(1);
             musicCollectionRepository.GetAlbumByTitle(ValidAlbumTitle).SongList.Should().NotBeEmpty();
         }
 
@@ -182,7 +182,7 @@ namespace MusicPlayerTest.RepositoryControl
             musicCollectionRepository.RemoveAllEntries();
 
             //Assert
-            MusicCollectionRepository.AlbumCollection.Should().BeEmpty();
+            musicCollectionRepository.AlbumCollection.Should().BeEmpty();
         }
     }
 }

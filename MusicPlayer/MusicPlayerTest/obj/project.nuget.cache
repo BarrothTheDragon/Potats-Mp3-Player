@@ -1,6 +1,10 @@
 {
   "version": 2,
+<<<<<<< HEAD
   "dgSpecHash": "2ddtO0N79V07W6lttaSXzUkM1ZZpciwpHQI4whI47BaCh6aHO+039c2P/5P04HeoUfry1R6hogLD8BFWZLTIgw==",
+=======
+  "dgSpecHash": "T1xV2ZUZMBHcYe4Inlvf5IbvGF8hBiOmWjofuVi0RSRleQ+DznZu18iR4TN2rUwWYEw6YuVCaGtCe+Vz4M90Mg==",
+>>>>>>> main_menu
   "success": true,
   "projectFilePath": "E:\\MyCode\\Potats-Mp3-Player\\MusicPlayer\\MusicPlayerTest\\MusicPlayerTest.csproj",
   "expectedPackageFiles": [
@@ -11,11 +15,12 @@
     "C:\\Users\\delia\\.nuget\\packages\\microsoft.codecoverage\\16.9.1\\microsoft.codecoverage.16.9.1.nupkg.sha512",
     "C:\\Users\\delia\\.nuget\\packages\\microsoft.csharp\\4.0.1\\microsoft.csharp.4.0.1.nupkg.sha512",
     "C:\\Users\\delia\\.nuget\\packages\\microsoft.net.test.sdk\\16.9.1\\microsoft.net.test.sdk.16.9.1.nupkg.sha512",
-    "C:\\Users\\delia\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\delia\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
     "C:\\Users\\delia\\.nuget\\packages\\microsoft.netcore.targets\\1.1.0\\microsoft.netcore.targets.1.1.0.nupkg.sha512",
     "C:\\Users\\delia\\.nuget\\packages\\microsoft.testplatform.objectmodel\\16.9.1\\microsoft.testplatform.objectmodel.16.9.1.nupkg.sha512",
     "C:\\Users\\delia\\.nuget\\packages\\microsoft.testplatform.testhost\\16.9.1\\microsoft.testplatform.testhost.16.9.1.nupkg.sha512",
     "C:\\Users\\delia\\.nuget\\packages\\microsoft.win32.primitives\\4.3.0\\microsoft.win32.primitives.4.3.0.nupkg.sha512",
+    "C:\\Users\\delia\\.nuget\\packages\\microsoft.win32.systemevents\\4.7.0\\microsoft.win32.systemevents.4.7.0.nupkg.sha512",
     "C:\\Users\\delia\\.nuget\\packages\\mstest.testadapter\\2.1.2\\mstest.testadapter.2.1.2.nupkg.sha512",
     "C:\\Users\\delia\\.nuget\\packages\\mstest.testframework\\2.1.2\\mstest.testframework.2.1.2.nupkg.sha512",
     "C:\\Users\\delia\\.nuget\\packages\\netstandard.library\\1.6.1\\netstandard.library.1.6.1.nupkg.sha512",
@@ -51,6 +56,7 @@
     "C:\\Users\\delia\\.nuget\\packages\\system.diagnostics.tools\\4.3.0\\system.diagnostics.tools.4.3.0.nupkg.sha512",
     "C:\\Users\\delia\\.nuget\\packages\\system.diagnostics.tracesource\\4.3.0\\system.diagnostics.tracesource.4.3.0.nupkg.sha512",
     "C:\\Users\\delia\\.nuget\\packages\\system.diagnostics.tracing\\4.3.0\\system.diagnostics.tracing.4.3.0.nupkg.sha512",
+    "C:\\Users\\delia\\.nuget\\packages\\system.drawing.common\\4.7.0\\system.drawing.common.4.7.0.nupkg.sha512",
     "C:\\Users\\delia\\.nuget\\packages\\system.dynamic.runtime\\4.0.11\\system.dynamic.runtime.4.0.11.nupkg.sha512",
     "C:\\Users\\delia\\.nuget\\packages\\system.globalization\\4.3.0\\system.globalization.4.3.0.nupkg.sha512",
     "C:\\Users\\delia\\.nuget\\packages\\system.globalization.calendars\\4.3.0\\system.globalization.calendars.4.3.0.nupkg.sha512",

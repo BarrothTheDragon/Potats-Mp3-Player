@@ -17,6 +17,7 @@ namespace MusicPlayer.UI
         {
             InitializeComponent();
             m_sourceDirectoriesListBox.ItemsSource = sourceFileRepository.SourceDirectories;
+            UpdateListboxDependantPageElements();
         }
 
         private void OnClickAdd(object sender, RoutedEventArgs e)

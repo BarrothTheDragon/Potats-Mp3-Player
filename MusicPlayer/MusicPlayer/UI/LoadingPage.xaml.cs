@@ -27,8 +27,7 @@ namespace MusicPlayer
 
         private void NavigateToAlbumPage(object sender, RunWorkerCompletedEventArgs e)
         {
-            //TODO routed to album page
-            var loadingPageUri = new Uri("UI/SelectMusicSourcePage.xaml", UriKind.Relative);
+            var loadingPageUri = new Uri("UI/MainMenuPage.xaml", UriKind.Relative);
             NavigationService.Navigate(loadingPageUri);
         }
 

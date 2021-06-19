@@ -117,12 +117,17 @@
     </ApplicationDefinition>
     <Compile Include="Controller\MusicLoader.cs" />
     <Compile Include="MusicPlayerElements\Album.cs" />
+    <Compile Include="MusicPlayerElements\DefaultAlbumResources.cs" />
     <Compile Include="MusicPlayerElements\MusicFile.cs" />
     <Compile Include="RepositoryControl\IRepositoryController.cs" />
     <Compile Include="RepositoryControl\MusicCollectionRepository.cs" />
     <Compile Include="Controller\MusicFileExtractor.cs" />
     <Compile Include="RepositoryControl\RepositoryController.cs" />
     <Compile Include="RepositoryControl\SourceFileRepository.cs" />
+    <Compile Include="UI\Converters\ByteArrayToImageConverter.cs" />
+    <Compile Include="UI\MainMenuPage.xaml.cs">
+      <DependentUpon>MainMenuPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="UI\SelectMusicSourcePage.xaml.cs">
       <DependentUpon>SelectMusicSourcePage.xaml</DependentUpon>
     </Compile>
@@ -148,6 +153,10 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="UI\MainMenuPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="UI\SelectMusicSourcePage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -200,7 +209,9 @@
     <Resource Include="Assets\WelcomeBackground.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Assets\WelcomePotat.png" />
+    <EmbeddedResource Include="Assets\WelcomePotat.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Assets\Add.png" />

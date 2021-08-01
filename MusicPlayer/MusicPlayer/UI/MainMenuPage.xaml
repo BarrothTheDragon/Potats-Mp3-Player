@@ -55,114 +55,65 @@
                                 RadiusY="15"
                                 Stroke="#abf2fb"
                                 StrokeThickness="5"
-                                Fill="#abf2fb">
-                                <Rectangle.Style>
-                                    <Style TargetType="{x:Type Rectangle}">
-                                        <Setter Property="Visibility" Value="Collapsed"/>
-                                        <Style.Triggers>
-                                            <DataTrigger
-                                                Binding="{Binding RelativeSource={RelativeSource AncestorType=Grid,AncestorLevel=1}, Path=IsMouseOver}"
-                                                Value="True">
-                                                <Setter Property="Visibility" Value="Visible" />
-                                                <DataTrigger.EnterActions>
-                                                    <BeginStoryboard>
-                                                        <Storyboard>
-                                                            <DoubleAnimation
-                                                                Storyboard.TargetProperty="Opacity"
-                                                                From="0.0" To="1.0" Duration="0:0:0.5"/>
-                                                        </Storyboard>
-                                                    </BeginStoryboard>
-                                                </DataTrigger.EnterActions>
-                                            </DataTrigger>
-                                        </Style.Triggers>
-                                    </Style>
-                                </Rectangle.Style>
-                            </Rectangle>
+                                Fill="#abf2fb"
+                                Style="{StaticResource AppearingRectangleOnHover}"/>
 
-                            <Image 
-                                x:Name="m_coverArt"
-                                Margin="5"
-                                MaxHeight="200"
-                                HorizontalAlignment="Center"
-                                VerticalAlignment="Center"
-                                Stretch="Fill"
-                                UseLayoutRounding="True"
-                                RenderOptions.BitmapScalingMode="Fant">
-                                <Image.Source>
-                                    <Binding Path="Cover" Converter="{StaticResource ByteArrayToImageConverter}">
-                                        <Binding.TargetNullValue>
-                                            <ImageSource>pack://siteoforigin:,,,/Assets/WelcomePotat.png</ImageSource>
-                                        </Binding.TargetNullValue>
-                                    </Binding>
-                                </Image.Source>
-                                <Image.Clip>
-                                    <RectangleGeometry RadiusX="15"
+                            <Button Click="OnClickNavigateToAlbumPage">
+                                <Button.Template>
+                                    <ControlTemplate TargetType="{x:Type Button}">
+                                        <Image 
+                                            x:Name="m_coverArt"
+                                            Margin="5"
+                                            MaxHeight="200"
+                                            HorizontalAlignment="Center"
+                                            VerticalAlignment="Center"
+                                            Stretch="Fill"
+                                            UseLayoutRounding="True"
+                                            RenderOptions.BitmapScalingMode="Fant">
+                                            <Image.Source>
+                                                <Binding Path="Cover" Converter="{StaticResource ByteArrayToImageConverter}">
+                                                    <Binding.TargetNullValue>
+                                                        <ImageSource>pack://siteoforigin:,,,/Assets/WelcomePotat.png</ImageSource>
+                                                    </Binding.TargetNullValue>
+                                                </Binding>
+                                            </Image.Source>
+                                            <Image.Clip>
+                                                <RectangleGeometry RadiusX="15"
                                            RadiusY="15"
                                            Rect="0,0,190,190"/>
-                                </Image.Clip>
-                                <Image.Style>
-                                    <Style TargetType="{x:Type Image}">
-                                        <Setter Property="Opacity" Value="1"/>
-                                        <Style.Triggers>
-                                            <DataTrigger Binding="{Binding RelativeSource={RelativeSource AncestorType=Grid,AncestorLevel=1}, Path=IsMouseOver}" Value="True" >
-                                                <Setter Property="Opacity" Value="0.6"/>
-                                            </DataTrigger>
-                                        </Style.Triggers>
-                                    </Style>
-                                </Image.Style>
-                            </Image>
+                                            </Image.Clip>
+                                            <Image.Style>
+                                                <Style TargetType="{x:Type Image}">
+                                                    <Setter Property="Opacity" Value="1"/>
+                                                    <Style.Triggers>
+                                                        <DataTrigger Binding="{Binding RelativeSource={RelativeSource AncestorType=Grid,AncestorLevel=1}, Path=IsMouseOver}" Value="True" >
+                                                            <Setter Property="Opacity" Value="0.6"/>
+                                                        </DataTrigger>
+                                                    </Style.Triggers>
+                                                </Style>
+                                            </Image.Style>
+                                            <Image.InputBindings>
+                                                <MouseBinding Gesture="LeftClick" Command="{Binding OnClickNavigateToAlbumPage, Mode=OneTime}" />
+                                            </Image.InputBindings>
+                                        </Image>
+                                    </ControlTemplate>
+                                </Button.Template>
+                            </Button>
 
                             <Polygon
                                 Points="0,150 0,110 100,130"
                                 Stroke="#5d54a4"
                                 StrokeThickness="3"
-                                Fill="#9d65c9">
-                                <Polygon.Style>
-                                    <Style TargetType="{x:Type Polygon}">
-                                        <Setter Property="Visibility" Value="Collapsed"/>
-                                        <Style.Triggers>
-                                            <DataTrigger Binding="{Binding RelativeSource={RelativeSource AncestorType=Grid,AncestorLevel=1}, Path=IsMouseOver}" Value="True" >
-                                                <Setter Property="Visibility" Value="Visible" />
-                                                <DataTrigger.EnterActions>
-                                                    <BeginStoryboard>
-                                                        <Storyboard>
-                                                            <DoubleAnimation
-                                                                Storyboard.TargetProperty="Opacity"
-                                                                From="0.0" To="1.0" Duration="0:0:0.6"/>
-                                                        </Storyboard>
-                                                    </BeginStoryboard>
-                                                </DataTrigger.EnterActions>
-                                            </DataTrigger>
-                                        </Style.Triggers>
-                                    </Style>
-                                </Polygon.Style>
-                            </Polygon>
+                                Fill="#9d65c9"
+                                Style="{StaticResource AppearingPolygonOnHover}"/>
+
 
                             <Polygon
                                 Points="0,150 0,200 200,200 200,110"
                                 Stroke="#9d65c9"
                                 StrokeThickness="3"
-                                Fill = "#d789d7">
-                                <Polygon.Style>
-                                    <Style TargetType="{x:Type Polygon}">
-                                        <Setter Property="Visibility" Value="Collapsed"/>
-                                        <Style.Triggers>
-                                            <DataTrigger Binding="{Binding RelativeSource={RelativeSource AncestorType=Grid,AncestorLevel=1}, Path=IsMouseOver}" Value="True" >
-                                                <Setter Property="Visibility" Value="Visible" />
-                                                <DataTrigger.EnterActions>
-                                                    <BeginStoryboard>
-                                                        <Storyboard>
-                                                            <DoubleAnimation
-                                                                Storyboard.TargetProperty="Opacity"
-                                                                From="0.0" To="1.0" Duration="0:0:0.6"/>
-                                                        </Storyboard>
-                                                    </BeginStoryboard>
-                                                </DataTrigger.EnterActions>
-                                            </DataTrigger>
-                                        </Style.Triggers>
-                                    </Style>
-                                </Polygon.Style>
-                            </Polygon>
+                                Fill = "#d789d7"
+                                Style="{StaticResource AppearingPolygonOnHover}"/>
 
                             <TextBlock 
                                 Margin="5"
@@ -173,37 +124,16 @@
                                 TextTrimming="WordEllipsis"
                                 MaxHeight="50"
                                 FontWeight="Bold"
-                                Text="{Binding Title}">
-                                <TextBlock.Style>
-                                    <Style TargetType="{x:Type TextBlock}">
-                                        <Setter Property="Visibility" Value="Collapsed"/>
-                                        <Style.Triggers>
-                                            <DataTrigger Binding="{Binding Cover}" Value="{x:Null}">
-                                                <Setter Property="Visibility" Value="Visible" />
-                                            </DataTrigger>
-                                            <DataTrigger Binding="{Binding RelativeSource={RelativeSource AncestorType=Grid,AncestorLevel=1}, Path=IsMouseOver}" Value="True" >
-                                                <Setter Property="Visibility" Value="Visible" />
-                                                <DataTrigger.EnterActions>
-                                                    <BeginStoryboard>
-                                                        <Storyboard>
-                                                            <DoubleAnimation
-                                                                Storyboard.TargetProperty="Opacity"
-                                                                From="0.0" To="1.0" Duration="0:0:0.6"/>
-                                                        </Storyboard>
-                                                    </BeginStoryboard>
-                                                </DataTrigger.EnterActions>
-                                            </DataTrigger>
-                                        </Style.Triggers>
-                                    </Style>
-                                </TextBlock.Style>
-                            </TextBlock>
+                                Text="{Binding Title}"
+                                Style="{StaticResource AppearingTextBlockOnHover}"/>
 
                             <Button
                                 Width="60"
                                 Height="60"
                                 HorizontalAlignment="Center"
                                 VerticalAlignment="Top"
-                                Margin="0,45,0,0">
+                                Margin="0,45,0,0"
+                                Style="{StaticResource AppearingButtonOnHover}">
                                 <Button.Template>
                                     <ControlTemplate TargetType="{x:Type Button}">
                                         <Grid>
@@ -222,33 +152,6 @@
                                         </Grid>
                                     </ControlTemplate>
                                 </Button.Template>
-                                <Button.Style>
-                                    <Style TargetType="{x:Type Button}">
-                                        <Setter Property="Visibility" Value="Collapsed"/>
-                                        <Style.Triggers>
-                                            <DataTrigger Binding="{Binding RelativeSource={RelativeSource AncestorType=Grid,AncestorLevel=1}, Path=IsMouseOver}" Value="True" >
-                                                <Setter Property="Visibility" Value="Visible" />
-                                                <DataTrigger.EnterActions>
-                                                    <BeginStoryboard>
-                                                        <Storyboard>
-                                                            <DoubleAnimation
-                                                                Storyboard.TargetProperty="Opacity"
-                                                                From="0.0" To="1.0" Duration="0:0:0.5"/>
-                                                        </Storyboard>
-                                                    </BeginStoryboard>
-                                                </DataTrigger.EnterActions>
-                                            </DataTrigger>
-                                            <Trigger Property="IsMouseOver" Value="True">
-                                                <Setter Property="RenderTransformOrigin" Value="0.5, 0.5"/>
-                                                <Setter Property="RenderTransform">
-                                                    <Setter.Value>
-                                                        <ScaleTransform ScaleX="1.2" ScaleY="1.2"/>
-                                                    </Setter.Value>
-                                                </Setter>
-                                            </Trigger>
-                                        </Style.Triggers>
-                                    </Style>
-                                </Button.Style>
                             </Button>
                         </Grid>
                     </DataTemplate>

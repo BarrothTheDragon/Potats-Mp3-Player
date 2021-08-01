@@ -124,6 +124,9 @@
     <Compile Include="Controller\MusicFileExtractor.cs" />
     <Compile Include="RepositoryControl\RepositoryController.cs" />
     <Compile Include="RepositoryControl\SourceFileRepository.cs" />
+    <Compile Include="UI\AlbumPage.xaml.cs">
+      <DependentUpon>AlbumPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="UI\Converters\ByteArrayToImageConverter.cs" />
     <Compile Include="UI\MainMenuPage.xaml.cs">
       <DependentUpon>MainMenuPage.xaml</DependentUpon>
@@ -134,6 +137,10 @@
     <Compile Include="UI\TitlePage.xaml.cs">
       <DependentUpon>TitlePage.xaml</DependentUpon>
     </Compile>
+    <Page Include="UI\AlbumPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="UI\LoadingPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

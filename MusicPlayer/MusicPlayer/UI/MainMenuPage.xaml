@@ -57,56 +57,45 @@
                                 StrokeThickness="5"
                                 Fill="#abf2fb"
                                 Style="{StaticResource AppearingRectangleOnHover}"/>
-
-                            <Button Click="OnClickNavigateToAlbumPage">
-                                <Button.Template>
-                                    <ControlTemplate TargetType="{x:Type Button}">
-                                        <Image 
-                                            x:Name="m_coverArt"
-                                            Margin="5"
-                                            MaxHeight="200"
-                                            HorizontalAlignment="Center"
-                                            VerticalAlignment="Center"
-                                            Stretch="Fill"
-                                            UseLayoutRounding="True"
-                                            RenderOptions.BitmapScalingMode="Fant">
-                                            <Image.Source>
-                                                <Binding Path="Cover" Converter="{StaticResource ByteArrayToImageConverter}">
-                                                    <Binding.TargetNullValue>
-                                                        <ImageSource>pack://siteoforigin:,,,/Assets/WelcomePotat.png</ImageSource>
-                                                    </Binding.TargetNullValue>
-                                                </Binding>
-                                            </Image.Source>
-                                            <Image.Clip>
-                                                <RectangleGeometry RadiusX="15"
-                                           RadiusY="15"
-                                           Rect="0,0,190,190"/>
-                                            </Image.Clip>
-                                            <Image.Style>
-                                                <Style TargetType="{x:Type Image}">
-                                                    <Setter Property="Opacity" Value="1"/>
-                                                    <Style.Triggers>
-                                                        <DataTrigger Binding="{Binding RelativeSource={RelativeSource AncestorType=Grid,AncestorLevel=1}, Path=IsMouseOver}" Value="True" >
-                                                            <Setter Property="Opacity" Value="0.6"/>
-                                                        </DataTrigger>
-                                                    </Style.Triggers>
-                                                </Style>
-                                            </Image.Style>
-                                            <Image.InputBindings>
-                                                <MouseBinding Gesture="LeftClick" Command="{Binding OnClickNavigateToAlbumPage, Mode=OneTime}" />
-                                            </Image.InputBindings>
-                                        </Image>
-                                    </ControlTemplate>
-                                </Button.Template>
-                            </Button>
-
+                            <Image 
+                                x:Name="m_coverArt"
+                                Margin="5"
+                                MaxHeight="200"
+                                HorizontalAlignment="Center"
+                                VerticalAlignment="Center"
+                                Stretch="Fill"
+                                UseLayoutRounding="True"
+                                RenderOptions.BitmapScalingMode="Fant">
+                                <Image.Source>
+                                    <Binding Path="Cover" Converter="{StaticResource ByteArrayToImageConverter}">
+                                        <Binding.TargetNullValue>
+                                            <ImageSource>pack://siteoforigin:,,,/Assets/WelcomePotat.png</ImageSource>
+                                        </Binding.TargetNullValue>
+                                    </Binding>
+                                </Image.Source>
+                                <Image.Clip>
+                                    <RectangleGeometry RadiusX="15" RadiusY="15" Rect="0,0,190,190"/>
+                                </Image.Clip>
+                                <Image.Style>
+                                    <Style TargetType="{x:Type Image}">
+                                        <Setter Property="Opacity" Value="1"/>
+                                        <Style.Triggers>
+                                            <DataTrigger Binding="{Binding RelativeSource={RelativeSource AncestorType=Grid,AncestorLevel=1}, Path=IsMouseOver}" Value="True" >
+                                                <Setter Property="Opacity" Value="0.6"/>
+                                            </DataTrigger>
+                                        </Style.Triggers>
+                                    </Style>
+                                </Image.Style>
+                                <Image.InputBindings>
+                                    <MouseBinding Gesture="LeftClick" Command="{Binding OnClickNavigateToAlbumPage, Mode=OneTime}" />
+                                </Image.InputBindings>
+                            </Image>
                             <Polygon
                                 Points="0,150 0,110 100,130"
                                 Stroke="#5d54a4"
                                 StrokeThickness="3"
                                 Fill="#9d65c9"
                                 Style="{StaticResource AppearingPolygonOnHover}"/>
-
 
                             <Polygon
                                 Points="0,150 0,200 200,200 200,110"
@@ -130,9 +119,36 @@
                             <Button
                                 Width="60"
                                 Height="60"
-                                HorizontalAlignment="Center"
+                                HorizontalAlignment="Left"
                                 VerticalAlignment="Top"
-                                Margin="0,45,0,0"
+                                Margin="30,40,0,0"
+                                Click="OnClickNavigateToAlbumPage"
+                                Style="{StaticResource AppearingButtonOnHover}">
+                                <Button.Template>
+                                    <ControlTemplate TargetType="{x:Type Button}">
+                                        <Grid>
+                                            <Ellipse 
+                                                Width="{TemplateBinding Width}"
+                                                Height="{TemplateBinding Height}"
+                                                Stroke="#5454c5"
+                                                Fill="#5454c5"
+                                                StrokeThickness="3"/>
+                                            <Image
+                                                MaxWidth="40"
+                                                MaxHeight="40"
+                                                Source="pack://siteoforigin:,,,/Assets/Music Note.png"/>
+                                            <ContentPresenter VerticalAlignment="Top" HorizontalAlignment="Left"/>
+                                        </Grid>
+                                    </ControlTemplate>
+                                </Button.Template>
+                            </Button>
+
+                            <Button
+                                Width="60"
+                                Height="60"
+                                HorizontalAlignment="Right"
+                                VerticalAlignment="Top"
+                                Margin="0,40,30,0"
                                 Style="{StaticResource AppearingButtonOnHover}">
                                 <Button.Template>
                                     <ControlTemplate TargetType="{x:Type Button}">

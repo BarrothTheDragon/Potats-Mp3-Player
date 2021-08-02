@@ -16,6 +16,7 @@ using System.Windows.Shapes;
 using MusicPlayer.RepositoryControl;
 using System.IO;
 using System.Globalization;
+using System.Windows.Media.Animation;
 
 namespace MusicPlayer.UI
 {
@@ -30,6 +31,12 @@ namespace MusicPlayer.UI
         {
             InitializeComponent();
             m_albumCollectionItemsControl.ItemsSource = musicCollectionRepository.AlbumCollection;
+        }
+
+        private void OnClickNavigateToAlbumPage(object sender, EventArgs e)
+        {
+            var loadingPageUri = new Uri("UI/AlbumPage.xaml", UriKind.Relative);
+            NavigationService.Navigate(loadingPageUri);
         }
     }
 }

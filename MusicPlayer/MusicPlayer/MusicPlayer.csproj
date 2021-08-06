@@ -127,6 +127,7 @@
     <Compile Include="UI\AlbumPage.xaml.cs">
       <DependentUpon>AlbumPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="UI\Converters\ArrayToStringConverter.cs" />
     <Compile Include="UI\Converters\ByteArrayToImageConverter.cs" />
     <Compile Include="UI\MainMenuPage.xaml.cs">
       <DependentUpon>MainMenuPage.xaml</DependentUpon>

@@ -8,15 +8,13 @@ namespace MusicPlayer.UI.Converters
     {
         public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
         {
-            var valueArray = IsValidStringArray(value) ? (string[])value : null;
-            var parameterString = IsValidString(parameter) ? (string)parameter : null;
-
-            if(valueArray != null)
+            if(!IsValidStringArray(value))
             {
-                return parameterString == null ? string.Join(" ", valueArray) : string.Join(parameterString, valueArray);
+                return "";
             }
 
-            return null;
+            var parameterString = IsValidString(parameter) ? (string)parameter : "";
+            return $"{parameterString} {string.Join(",", (string[])value)}";
         }
 
         public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)

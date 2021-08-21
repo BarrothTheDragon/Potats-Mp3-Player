@@ -58,14 +58,15 @@
             Grid.Row="0"
             Grid.Column="1"
             HorizontalAlignment="Left"
-            Text="{Binding Title}"/>
+            Text="{Binding Title}"
+            Style="{StaticResource TitleLabelStyle}"/>
 
         <TextBlock
             Grid.Row="1"
             Grid.Column="1"
             HorizontalAlignment="Left">
             <TextBlock.Text>
-                <Binding Path="Artists" Converter="{StaticResource ArrayToStringConverter}"/>
+                <Binding Path="Artists" Converter="{StaticResource ArrayToStringConverter}" ConverterParameter="By"/>
             </TextBlock.Text>
         </TextBlock>
 
@@ -74,7 +75,7 @@
             Grid.Column="1"
             HorizontalAlignment="Left">
             <TextBlock.Text>
-                <Binding Path="Genre" Converter="{StaticResource ArrayToStringConverter}"/>
+                <Binding Path="Genre" Converter="{StaticResource ArrayToStringConverter}" ConverterParameter="Genre:"/>
             </TextBlock.Text>
         </TextBlock>
 

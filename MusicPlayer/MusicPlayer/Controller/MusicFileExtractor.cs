@@ -6,7 +6,7 @@ namespace MusicPlayer.RepositoryControl
 {
     public class MusicFileExtractor
     {
-        readonly SourceFileRepository sourceFileRepository = RepositoryController.GetSourceFileRepository;
+        private readonly SourceFileRepository _sourceFileRepository = RepositoryController.GetSourceFileRepository;
 
         private const string Mp3Extension = ".mp3";
         private readonly static List<string> AcceptedFileExtensions = new List<string> {
@@ -15,15 +15,16 @@ namespace MusicPlayer.RepositoryControl
 
         public List<string> GetAllMusicFiles()
         {
-            var subDirectories = ExtractSubdirectories();
+            var subDirectories = BuildAListOfPotentialFoldersWithMusic();
             return ExtractMusicFiles(subDirectories);
         }
 
-        private List<string> ExtractSubdirectories()
+        private List<string> BuildAListOfPotentialFoldersWithMusic()
         {
-            var subFolderSet = new HashSet<string>();
-            sourceFileRepository.SourceDirectories.ForEach(entry => subFolderSet.UnionWith(GetAllFolderSubDirectories(entry)));
-            return subFolderSet.ToList();
+            var foldersThatMayContainMusic = new HashSet<string>();
+            _sourceFileRepository.SourceDirectories.ForEach(entry => foldersThatMayContainMusic.UnionWith(GetAllFolderSubDirectories(entry)));
+            _sourceFileRepository.SourceDirectories.ForEach(entry => foldersThatMayContainMusic.Add(entry));
+            return foldersThatMayContainMusic.ToList();
         }
 
         private List<string> ExtractMusicFiles(List<string> subFolderSet)
